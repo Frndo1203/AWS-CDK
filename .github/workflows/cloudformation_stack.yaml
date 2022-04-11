@@ -3,7 +3,7 @@ name: Deploy Bucket
 on:
   push:
     branches:
-      - github_actions
+      - main
 
 jobs:
   deploy:
