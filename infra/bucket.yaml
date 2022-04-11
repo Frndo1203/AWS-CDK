@@ -1,0 +1,11 @@
+Description: Creates S3 Bucket
+
+Resources:
+  rawDataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      BucketName: raw-actions-fernando-bucket
