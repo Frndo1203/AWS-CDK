@@ -93,10 +93,10 @@ def create_or_update_stack():
 
 def renderize_template():
     logging.info(f'Rendering JINJA template')
-    with open('redshift.yaml.j2', 'r') as f:
+    with open(_get_abs_path('redshift.yaml.j2'), 'r') as f:
         redshift_yaml = f.read()
 
-    with open('config.yaml', 'r') as f:
+    with open(_get_abs_path('config.yaml'), 'r') as f:
         config_yaml = yaml.safe_load(f)
 
     redshift_template = jinja2.Template(redshift_yaml)
