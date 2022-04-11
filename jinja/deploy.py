@@ -108,4 +108,5 @@ def renderize_template():
 
 
 if __name__ == '__main__':
+    renderize_template()
     create_or_update_stack()
