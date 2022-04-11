@@ -1,4 +1,4 @@
-name: Deploy Bucket
+name: Jinja Production
 
 on:
   push:
