@@ -1,4 +1,3 @@
-from urllib import response
 import boto3
 import logging
 from botocore.exceptions import ClientError
@@ -44,9 +43,7 @@ def update_stack(stack_name, template_body, **kwargs):
         client.update_stack(
             StackName=stack_name,
             TemplateBody=template_body,
-            Capabilities=['CAPABILITY_IAM', 'CAPABILITY_NAMED_IAM'],
-            TimeoutInMinutes=30,
-            OnFailure='ROLLBACK'
+            Capabilities=['CAPABILITY_IAM', 'CAPABILITY_NAMED_IAM']
         )
 
     except ClientError as e:
